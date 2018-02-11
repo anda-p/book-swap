@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Tags from './Tags';
+
 class BookSummary extends React.Component {
     render() {
         return (
@@ -9,6 +11,7 @@ class BookSummary extends React.Component {
                 <p>
                     {this.props.description}
                 </p> 
+                <Tags values={this.props.tags} />
                 {this.props.available ? 
                     <button type="button" className="btn btn-success">Borrow</button>
                 : ""}   

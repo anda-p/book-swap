@@ -27,7 +27,7 @@ const store = configureStore({ "books": [
     title: "Another good book",
     description: "Highly recommended",
     available: true,
-    tags: ["Development"]
+    tags: ["Management"]
   }
 ]});
 
