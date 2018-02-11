@@ -16,6 +16,18 @@ const store = configureStore({ "books": [
     description: "A series activities to make your retrospectives more interesting",
     available: true,
     tags: ["Agile"]
+  },
+  {
+    title: "A test book",
+    description: "I like it",
+    available: true,
+    tags: ["Development"]
+  },
+  {
+    title: "Another good book",
+    description: "Highly recommended",
+    available: true,
+    tags: ["Development"]
   }
 ]});
 
