@@ -8,7 +8,7 @@ class Tags extends React.Component {
             <p>
                 {this.props.values.map((tag, index)=>
                     <span className="badge badge-default" key={index}
-                    style={{ background: tagColors[tag]}}>{tag}</span>)}
+                        style={{ background: tagColors[tag]}}>{tag}</span>)}
             </p>    
         );
     }

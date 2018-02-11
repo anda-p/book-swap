@@ -9,13 +9,13 @@ const store = configureStore({ "books": [
     title: "Head first networking",
     description: "Very good introduction to networking",
     available: true,
-    tags: ["Development"]
+    tags: ["Development", "Beginner"]
   },
   {
     title: "Agile retrospectives",
     description: "A series activities to make your retrospectives more interesting",
     available: true,
-    tags: ["Agile"]
+    tags: ["Agile", "Beginner"]
   },
   {
     title: "A test book",
