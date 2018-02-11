@@ -20,7 +20,7 @@ const store = configureStore({ "books": [
   {
     title: "A test book",
     description: "I like it",
-    available: true,
+    available: false,
     tags: ["Development"]
   },
   {
