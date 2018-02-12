@@ -7,7 +7,7 @@ class Tags extends React.Component {
         return (
             <p>
                 {this.props.values.map((tag, index)=>
-                    <span className="badge badge-default" key={index}
+                    <span className="badge badge-default tag" key={index}
                         style={{ background: tagColors[tag]}}>{tag}</span>)}
             </p>    
         );
