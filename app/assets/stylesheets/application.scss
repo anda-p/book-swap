@@ -16,6 +16,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-h1 {
-    font-size: 5.9vw;
+@media (max-width: 480px){
+  html {
+    font-size: 300%;
   }
+}
