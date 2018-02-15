@@ -8,16 +8,13 @@ class Checkbox extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({
-      checked: e.target.checked
-    });
-    this.props.onChange("I am " + (e.target.checked ? "checked" : "not checked"));
+    this.props.onChange(e.target.checked);
   }
 
   render() {
     return (
       <div>
-        <input type="checkbox" checked={this.state.checked} onClick={this.handleChange}/> 
+        <input type="checkbox" checked={this.props.checked} onChange={this.handleChange}/> 
         <label>{this.props.text}</label>
       </div>      
     );

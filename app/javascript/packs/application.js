@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import AllBooks from "../components/AllBooks"
 import configureStore from '../store/configureStore'
 
-const store = configureStore({ "books": [
+const store = configureStore({ books: [
   {
     title: "Head first networking",
     description: "Very good introduction to networking",
@@ -29,7 +29,10 @@ const store = configureStore({ "books": [
     available: true,
     tags: ["Management"]
   }
-]});
+], filters: {
+  all: ["Development", "Agile", "Beginner", "Management"],
+  active: ["Development", "Agile", "Beginner", "Management"]
+}});
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.body.appendChild(document.createElement('div'));
