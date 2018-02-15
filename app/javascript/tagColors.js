@@ -1,9 +1,9 @@
 // TODO: this will be replaced with saving the colors in the DB!!
-const tagColors = {
+export const colors = {
     "Development": "#9933CC",
     "Agile": "#FF8800",
     "Management": "#d81b60",
     "Beginner": "#7cb342"
 };
 
-export default tagColors;
+export const allTags = ["Development", "Agile", "Management", "Beginner"];

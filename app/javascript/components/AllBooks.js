@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import BookSummary from './BookSummary';
+import Filters from './Filters';
 
 class AllBooks extends React.Component {
   booksInRows(){
@@ -25,6 +26,7 @@ class AllBooks extends React.Component {
     return (
       <div className="container">
         <h1> These are all the books </h1>
+        <Filters />
         {this.booksInRows().map((bookRow, index)=> 
           <div className="row" key={index}>
             {bookRow.map((book, index)=>
