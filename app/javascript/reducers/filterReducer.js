@@ -1,14 +1,12 @@
 export default function filterReducer(state = {}, action){
     switch (action.type){
         case 'TOGGLE_FILTER':
-            let { active } = state;
-            if (action.status && !state.active.indexOf(action.name)) {
-                return {
-                    // remove from filters
-                }
+            const activeFilters = action.enable? [...state.active, action.filterName] : 
+                            state.active.filter((filterName)=> filterName !== action.filterName);
+            return {
+                ...state,
+                active: activeFilters
             }
-            return state;
-            break;
       default:
         return state;
     }

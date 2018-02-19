@@ -1,3 +1,3 @@
-export const toggleFilter = (filterName, status) => {
-    return { type: 'TOGGLE_FILTER', filterName, status }
+export const toggleFilter = (filterName, enable) => {
+    return { type: 'TOGGLE_FILTER', filterName, enable }
 }
