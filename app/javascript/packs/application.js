@@ -30,8 +30,8 @@ const store = configureStore({ books: [
     tags: ["Management"]
   }
 ], filters: {
-  all: ["Development", "Agile", "Beginner", "Management"],
-  active: ["Development", "Agile", "Beginner", "Management"]
+  all: [{name: "Development", enabled: true} , {name: "Agile", enabled: true}, 
+        {name: "Beginner", enabled: true}, {name: "Management", enabled: true} ]
 }});
 
 document.addEventListener('DOMContentLoaded', () => {
