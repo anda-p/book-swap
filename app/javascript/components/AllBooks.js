@@ -7,7 +7,7 @@ import Filters from './Filters';
 class AllBooks extends React.Component {
   booksInRows(){
     let mappedRows = [], currentRow = [];
-    this.props.books.map((book, index)=>{
+    this.props.books.filter(book=>book.displayed).map((book, index)=>{
       if (index % 3 === 0 && index > 0){
         mappedRows.push(currentRow);
         currentRow = [];
