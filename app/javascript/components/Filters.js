@@ -5,19 +5,18 @@ import {toggleFilter} from '../actions/filterActions';
 
 class Filters extends React.Component {
   render() {
-    const { all } = this.props.filters;
-
-    console.log(this.props.filters)
-      return (
-        <div>
-          {this.props.filters.all.map((filter, index)=>
-            <Checkbox text={filter.name} 
-                      key={index} 
-                      onChange={(checked) => this.props.toggleFilter(filter.name, checked)}
-                      checked={filter.enabled}/>
-          )}
-        </div>      
-      );
+    return (
+      <div class="row">
+        {this.props.filters.all.map((filter, index)=>
+        <div className="col-md-2">
+          <Checkbox text={filter.name} 
+                    key={index} 
+                    onChange={(checked) => this.props.toggleFilter(filter.name, checked)}
+                    checked={filter.enabled}/>
+        </div>            
+        )}
+      </div>      
+    );
   }
 }
 
