@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import AllBooks from "../components/AllBooks"
+import BooksContainer from "../components/BooksContainer"
 import configureStore from '../store/configureStore'
 
 const store = configureStore({ books: [
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.body.appendChild(document.createElement('div'));
   render(
     <Provider store={store}>
-      <AllBooks/>
+      <BooksContainer />
     </Provider>,
   container);
 });
