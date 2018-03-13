@@ -19,7 +19,7 @@ describe('book reducer', () => {
       const state = [xBook, yBook, zBook];
   
       expect(bookReducer(state, { type: 'TOGGLE_FILTER', filterName: "Dev", enable: false }))
-        .toEqual([{ title: 'X', tags: ["Dev", "Beginner"], displayed: false },
+        .toEqual([{ title: 'X', tags: ["Dev", "Beginner"], displayed: true },
                   { title: 'Y', tags: ["Dev"], displayed: false }, 
                   { title: 'Z', tags: ["Agile", "Beginner"], displayed: true }])
     })
@@ -51,13 +51,15 @@ describe('book reducer', () => {
         .toEqual(initialState);
     })
 
-    it('combinations of filters works', () => {
+    it.only('combinations of filters works', () => {
       const initialState = [xBook, yBook, zBook];
       const disabledState = bookReducer(initialState, { type: 'TOGGLE_FILTER', filterName: "Dev", enable: false });
-      //const finalState = bookReducer(disabledState, { type: 'TOGGLE_FILTER', filterName: "Agile", enable: true });
+      const finalState = bookReducer(disabledState, { type: 'TOGGLE_FILTER', filterName: "Beginner", enable: false });
 
-      expect(disabledState)
-        .toEqual(initialState);
+      expect(finalState)
+        .toEqual([{ title: 'X', tags: ["Dev", "Beginner"], displayed: false },
+                  { title: 'Y', tags: ["Dev"], displayed: false }, 
+                  { title: 'Z', tags: ["Agile", "Beginner"], displayed: true }]);
     })
   })
 })
